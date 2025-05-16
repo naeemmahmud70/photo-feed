@@ -4,8 +4,6 @@ import { getDictionary } from "@/app/[lang]/disctionaries";
 import Image from "next/image";
 
 const PhotoDetails = async ({ id, lang }) => {
-
-
   const response = await fetch(`${process.env.BASE_API_URL}/photos/${id}`);
   const photo = await response.json();
 
@@ -21,6 +19,7 @@ const PhotoDetails = async ({ id, lang }) => {
           width={900}
           height={500}
         />
+        
       </div>
 
       <div className="p-6 border rounded-xl col-span-12 lg:col-span-4">
